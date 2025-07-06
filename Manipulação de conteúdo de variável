@@ -1,0 +1,10 @@
+int main(){
+    int numero = 50;
+    int* ptrnumero = &numero;
+    
+    *ptrnumero = *ptrnumero + 10;
+    
+    printf("O valor é %d\n", numero);
+    
+    return 0;
+}
