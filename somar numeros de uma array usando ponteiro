@@ -1,0 +1,18 @@
+int somarnumeros(int*array, int tamanho){
+    int i;
+    int total=0;
+    
+    for(i=0; i < tamanho; i++){
+       total = total + *(array+i);
+    }
+    return total;
+}
+
+int main(){
+    int numeros[] = {5, 10, 15, 20};
+    int soma = somarnumeros(numeros, 4);
+    printf("A soma é: %d\n", soma); 
+    
+    
+    return 0;
+}
