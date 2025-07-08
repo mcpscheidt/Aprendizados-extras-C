@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int contar_vogais(char*string){
+    char aux;
+    int contador = 0;
+
+
+    for(int i =0; i < strlen(string); i++){
+        if (*(string + i) == 'a' ||*(string + i) == 'e' ||*(string + i) == 'i' ||*(string + i) == 'o' ||*(string + i) == 'u' ){
+            contador++;
+        }
+
+    }
+
+
+
+    return contador;
+}
+
+int main(){
+
+    char palavra[] = "sapo";
+
+    int num = contar_vogais(palavra);
+
+    printf("Resultado %d", num);
+
+    return 0;
+
+}
