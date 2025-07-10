@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int *encontrar_min_max(int *array, int tamanho){
+
+    int min = array[0];
+    int max = array[0];
+    for(int i =0; i < tamanho; i++){
+        if(array[i]<min){
+            min = array[i];
+        }
+        if(array[i]>max){
+            max = array[i];
+        }
+        }
+        //resultado é ponteiro pois malloc retorna um endereço de memória
+        //malloc retorna um endereço, então eu preciso do (int*) para que "avisar" que o endereço é de um inteiro
+        // como malloc da um endereço, a variavel "resultado" precisa ser um ponteiro
+        int* resultado = (int*)malloc(2 * sizeof(int));
+resultado [0] = min;
+resultado [1] = max;
+
+
+
+
+   return resultado;
+}
+
+int main(){
+int numeros[] = {8, 3, 10, 1, 7};
+int* resultado = encontrar_min_max(numeros, 5);
+
+    printf("Minimo: %d, Maximo: %d\n", resultado[0], resultado[1]);
+
+    //free é utilizado para que a memoria de malloc torne-se disponível novamente.
+    //neste progama não teria muito problema não utilizar free, mas em programas grande consumiria uma grande quantidade de RAM
+    free(resultado);
+
+
+    return 0;
+
+
+
+}
