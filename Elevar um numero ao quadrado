@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void elevaraoquadrado(int* array, int tamanho){
+    int j=0;
+    int aux;
+    
+    
+    for(int i = 0; i < tamanho; i++){
+        array[i] = array[i]*array[i];
+        
+
+    }
+
+
+
+}
